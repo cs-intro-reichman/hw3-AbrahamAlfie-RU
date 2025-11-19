@@ -16,9 +16,9 @@ public class Algebra {
 		// System.out.println(div(12, 3)); // 12 / 3
 		// System.out.println(div(5, 5)); // 5 / 5
 		// System.out.println(div(25, 7)); // 25 / 7
-		System.out.println(mod(10, 2)); // 25 % 7
+		// System.out.println(mod(10, 2)); // 25 % 7
 		// System.out.println(mod(120, 6)); // 120 % 6
-		// System.out.println(sqrt(36));
+		// System.out.println(sqrt(25));
 		// System.out.println(sqrt(263169));
 		// System.out.println(sqrt(76123));
 	}
@@ -90,6 +90,7 @@ public class Algebra {
 		if (x1 == 0) {
 			return 0;
 		}
+		// Checks if either x1 or x2 and converts them to positive
 		boolean x1Neg = (x1 <= 0) ? true : false;
 		boolean x2Neg = (x2 <= 0) ? true : false;
 		x1 = x1Neg ? times(x1, -1) : x1;
@@ -103,7 +104,7 @@ public class Algebra {
 			large = minus(large, small);
 			count++;
 		}
-
+		// returns negative count when either one of them is negative
 		return ((x1Neg && x2Neg) || (!(x1Neg || x2Neg))) ? count : times(count, -1);
 	}
 
@@ -117,8 +118,19 @@ public class Algebra {
 
 	// Returns the integer part of sqrt(x)
 	public static int sqrt(int x) {
-		int l = 1;
-		int g = div(plus(l, x), 2);
-		return 0;
+		// the root is always less than x
+		int i = 0;
+
+		while ((i <= x)) {
+			if ((times(i, i)) > x) {
+				break;
+			} else {
+				i++;
+			}
+		}
+		if (mod(i, x) != 0) {
+			return i - 1;
+		}
+		return i;
 	}
 }
