@@ -18,7 +18,7 @@ public class Algebra {
 		// System.out.println(div(25, 7)); // 25 / 7
 		// System.out.println(mod(10, 2)); // 25 % 7
 		// System.out.println(mod(120, 6)); // 120 % 6
-		// System.out.println(sqrt(25));
+		System.out.println(sqrt(0));
 		// System.out.println(sqrt(263169));
 		// System.out.println(sqrt(76123));
 	}
@@ -121,6 +121,10 @@ public class Algebra {
 		// the root is always less than x
 		int i = 0;
 
+		if (x == 0) {
+			return i;
+		}
+
 		while ((i <= x)) {
 			if ((times(i, i)) > x) {
 				break;
@@ -128,6 +132,7 @@ public class Algebra {
 				i++;
 			}
 		}
+
 		if (mod(i, x) != 0) {
 			return i - 1;
 		}
