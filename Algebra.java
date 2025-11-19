@@ -121,7 +121,7 @@ public class Algebra {
 		// the root is always less than x
 		int i = 0;
 
-		if (x == 0){
+		if (x == 0) {
 			return i;
 		}
 
