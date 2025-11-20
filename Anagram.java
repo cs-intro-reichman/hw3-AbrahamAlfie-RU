@@ -9,7 +9,6 @@ public class Anagram {
 
 		// Tests the preProcess function.
 		System.out.println(preProcess("What? No way!!!"));
-		// System.out.println(preProcess(" Hello?!"));
 
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
@@ -96,8 +95,6 @@ public class Anagram {
 		// random index
 		randomAnagram = str.substring((int) randomShift, randomAnagram.length());
 		randomAnagram += str.substring(0, (int) randomShift);
-
-		System.out.println(randomAnagram);
 
 		return randomAnagram;
 	}
